@@ -6,7 +6,7 @@ class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 1000
-        self.active_weapon = [Weapon("Incessant talking", (random.randint(75,125))), Weapon("Blinding Reflection", (random.randint(75,125))), Weapon("Call in the Cavalry", (random.randint(125,175)))]
+        self.active_weapon = [Weapon("Incessant talking", (random.randint(25,125))), Weapon("Blinding Reflection", (random.randint(50,125))), Weapon("Call in the Cavalry", (random.randint(125,200)))]
     def attack(self, dinosaur):
         choose_weapon = input("What weapon would you like to use? 1: Incessant Talking, 2: Blinding Reflection, or 3: 'Call in the Cavalry': ")
         if choose_weapon == "1":
