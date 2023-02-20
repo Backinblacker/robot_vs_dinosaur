@@ -28,9 +28,8 @@ class Battlefield:
             elif self.dinosaur.health <= 0:
                 print(f"{self.dinosaur.name} has been defeated.")
                 break
-            else:
-                print("Let's go again!")
-                break
+        else:
+            print("Let's go again!")
     
     def who_won(self):
         if self.robot.health <= 0:
