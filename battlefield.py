@@ -5,7 +5,7 @@ from dinosaur import Dinosaur
 
 class Battlefield:
     def __init__(self, name):
-        self.dinosaur = Dinosaur("Triceratops", (150))
+        self.dinosaur = Dinosaur("Triceratops", (random.randint(100,250)))
         self.robot = Robot("C3PO")
         self.name = name
         
