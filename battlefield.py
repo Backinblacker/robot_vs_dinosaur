@@ -1,11 +1,10 @@
-# This is the battlefield where the action will happen
 import random
 from robot import Robot
 from dinosaur import Dinosaur
 
 class Battlefield:
     def __init__(self, name):
-        self.dinosaur = Dinosaur("Triceratops", (random.randint(75,250)))
+        self.dinosaur = Dinosaur("Triceratops", (random.randint(75,175)))
         self.robot = Robot("C3PO")
         self.name = name
         
@@ -33,9 +32,9 @@ class Battlefield:
     
     def who_won(self):
         if self.robot.health <= 0:
-            print(f"{self.dinosaur.name} has shocked the historians and defeated {self.robot.name}!")
+            print(f"{self.dinosaur.name} has defeated {self.robot.name}!")
         elif self.dinosaur.health <= 0:
-            print(f"{self.robot.name} has defeated {self.dinosaur.name}!")
+            print(f"{self.robot.name} has shocked the historians and defeated {self.dinosaur.name}!")
             
     def run_battle(self):
         self.welcome_to_the_fight()
