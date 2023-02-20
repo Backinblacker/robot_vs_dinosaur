@@ -6,9 +6,10 @@ class Robot:
     def __init__(self, name):
         self.name = name
         self.health = 1000
-        self.active_weapon = [Weapon("Incessant talking", (random.randint(25,125))), Weapon("Blinding Reflection", (random.randint(50,125))), Weapon("Call in the Cavalry", (random.randint(125,200)))]
+        self.active_weapon = [Weapon("Incessant talking", 125), Weapon("Blinding Reflection", 150), Weapon("Call in the Cavalry", 200)]
     def attack(self, dinosaur):
         choose_weapon = input("What weapon would you like to use? 1: Incessant Talking, 2: Blinding Reflection, or 3: 'Call in the Cavalry': ")
+        # add for loop to print out all the weapons instead of hard coding it.
         if choose_weapon == "1":
             dinosaur.health -= self.active_weapon[0].attack_power
             print(f"{self.name} used {self.active_weapon[0].name} to bore {dinosaur.name} and caused {self.active_weapon[0].attack_power} damage!")
