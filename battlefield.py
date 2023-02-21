@@ -1,31 +1,16 @@
+# This is the battlefield where the action will happen
+import random
 from robot import Robot
 from dinosaur import Dinosaur
-from fleet import Fleet
-from herd import Herd
-import random
 
 class Battlefield:
     def __init__(self, name):
-        self.dinosaur = Dinosaur(self, 175)
-        self.robot = Robot(self)
-        self.herd = Herd(self.herd.herd)
-        self.fleet = Fleet(self.fleet.robot_fleet)
+        self.dinosaur = Dinosaur("Triceratops", random.randint(100,250))
+        self.robot = Robot("C3PO")
         self.name = name
         
     def welcome_to_the_fight(self):
         print(f"Today we witness {self.robot.name} getting lost in a prehistoric jungle and now has to fight for their life against a {self.dinosaur.name}")
-    
-    def random_dino(self,):
-        dino_select = random.choice(self.herd.herd)
-        self.dinosaur = dino_select
-        print(f"{dino_select} is today's Dino Champion!")
-        return dino_select
-    
-    def random_robot(self,):
-        robot_select = random.choice(self.fleet.robot_fleet)
-        self.robot = robot_select
-        print(f"{robot_select} is today's Robot Champion!")
-        return robot_select
     
     def the_battle(self):
         while self.robot.health >= 0 and self.dinosaur.health >= 0:
